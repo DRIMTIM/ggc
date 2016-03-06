@@ -72,7 +72,7 @@ return [
     'Error occurred while confirming user' => '',
     'Error occurred while deleting user' => '',
     'Finish' => '',
-    'Forgot password?' => '',
+    'Forgot password?' => 'Olvido la contrasenia?',
     'Gravatar email' => '',
     'Hello' => '',
     'If you already registered, sign in and connect this account on settings page' => '',

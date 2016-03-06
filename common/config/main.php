@@ -1,6 +1,6 @@
 <?php
 return [
-    'language' => 'en-US',//'es-UY',//
+    'language' => 'es-UY',//'en-US',//'es-UY',//
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
         'cache' => [
@@ -10,6 +10,10 @@ return [
         'i18n' => [
             'translations' => [
                 '*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@common/messages',
+                ],
+                'core' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@common/messages',
                 ],

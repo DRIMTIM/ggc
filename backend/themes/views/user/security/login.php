@@ -39,11 +39,11 @@ $fieldOptions2 = [
 
 <div class="login-box">
     <div class="login-logo">
-        <a href="#"><b>Admin</b>LTE</a>
+        <a href="#"><b>GGC</b></a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        
+
          <?php $form = ActiveForm::begin([
             'id'                     => 'login-form',
             'enableAjaxValidation'   => true,
@@ -53,34 +53,32 @@ $fieldOptions2 = [
             'validateOnChange'       => false,
         ]) ?>
 
-        <?= $form->field($model, 'login', $fieldOptions1)->label(false)->textInput(['placeholder' => $model->getAttributeLabel('username')]) ?>
+        <?= $form->field($model, 'login', $fieldOptions1)->label(false)->textInput(['placeholder' => $model->getAttributeLabel('login')]) ?>
 
         <?= $form->field($model, 'password', $fieldOptions2)->label(false)->passwordInput(['placeholder' => $model->getAttributeLabel('password')]) ?>
-        
+
         <?= $form->field($model, 'rememberMe')->checkbox(['tabindex' => '4']) ?>
-        
+
         <?= Html::a(Yii::t('user', 'Forgot password?'), ['/user/recovery/request'], ['tabindex' => '5']) ?>
 
         <?= Connect::widget([
             'baseAuthUrl' => ['/user/security/auth']
         ]) ?>
-    
+
 
         <div class="row">
-            <div class="col-xs-8">
-                <?= $form->field($model, 'rememberMe')->checkbox() ?>
-            </div>
             <!-- /.col -->
-            <div class="col-xs-4">
+            <div class="col-xs-6">
                 <?= Html::submitButton(Yii::t('user', 'Sign in'), ['class' => 'btn btn-primary btn-block btn-flat', 'tabindex' => '3']) ?>
             </div>
             <!-- /.col -->
         </div>
 
+        <hr/>
+
         <?php ActiveForm::end(); ?>
-        
+
          <div class="social-auth-links text-center">
-            <p>- OR -</p>
             <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in
                 using Facebook</a>
             <a href="#" class="btn btn-block btn-social btn-google-plus btn-flat"><i class="fa fa-google-plus"></i> Sign
