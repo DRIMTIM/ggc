@@ -8,7 +8,7 @@ if (isset(Yii::$app->user->identity)) :
 <aside class="main-sidebar">
 
     <section class="sidebar">
-        
+
         <?php if (!Yii::$app->user->getIsGuest()) :?>
             <!-- Sidebar user panel -->
             <div class="user-panel">
@@ -35,17 +35,15 @@ if (isset(Yii::$app->user->identity)) :
         <!-- /.search form -->
         <?php endif; ?>
 
-        <?=        
+        <?=
         Nav::widget(
             [
                 'encodeLabels' => false,
                 'options' => ['class' => 'sidebar-menu'],
                 'items' => [
-                    '<li class="header">Menu Yii2</li>',
-                    ['label' => '<i class="fa fa-users"></i><span>Proveedores</span>', 'url' => ['/providers']],
+                    '<li class="header">Gestor Gastos Comunes</li>',
+                    ['label' => '<i class="fa fa-users"></i><span>Usuarios</span>', 'url' => ['/user/admin']],
                     ['label' => '<i class="fa fa-users"></i><span>Profile</span>', 'url' => ['/user/profile/show','id'=>isset(Yii::$app->user->identity) ? Yii::$app->user->identity->id : -1], 'visible' =>!Yii::$app->user->isGuest],
-                    ['label' => '<i class="fa fa-file-code-o"></i><span>Gii</span>', 'url' => ['/gii']],
-                    ['label' => '<i class="fa fa-dashboard"></i><span>Debug</span>', 'url' => ['/debug']],
                     [
                         'label' => '<i class="glyphicon glyphicon-lock"></i><span>Sing in</span>', //for basic
                         'url' => ['/site/login'],

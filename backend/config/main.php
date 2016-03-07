@@ -8,13 +8,14 @@ $params = array_merge(
 
 return [
     'id' => 'app-backend',
+    'name' => 'Cheto Puto',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [
         'user' => [
             'class' => 'dektrium\user\Module',
-            'admins' => ['admin, pelupotter']
+            'admins' => ['admin', 'pelupotter']
         ],
     ],
     'components' => [
