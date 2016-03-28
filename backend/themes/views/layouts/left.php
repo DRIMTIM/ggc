@@ -43,12 +43,23 @@ if (isset(Yii::$app->user->identity)) :
                 'items' => [
                     '<li class="header">Gestor Gastos Comunes</li>',
                     ['label' => '<i class="fa fa-users"></i><span>Usuarios</span>', 'url' => ['/user/admin']],
-                    ['label' => '<i class="fa fa-users"></i><span>Profile</span>', 'url' => ['/user/profile/show','id'=>isset(Yii::$app->user->identity) ? Yii::$app->user->identity->id : -1], 'visible' =>!Yii::$app->user->isGuest],
-                    [
-                        'label' => '<i class="glyphicon glyphicon-lock"></i><span>Sing in</span>', //for basic
-                        'url' => ['/site/login'],
-                        'visible' =>Yii::$app->user->isGuest
-                    ],
+                    ['label' => '<i class="fa fa-user"></i><span>Profile</span>', 'url' => ['/user/profile/show','id'=>isset(Yii::$app->user->identity) ? Yii::$app->user->identity->id : -1], 'visible' =>!Yii::$app->user->isGuest],
+                    ['label' => '<i class="fa fa-tags"></i><span>Categorias</span>', 'url' => ['/categorias']],
+                    '<li class="treeview">
+                        <a href="#"><i class="fa fa-share"></i> Item menu <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Item sub-menu</a></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-circle-o"></i> Item sub-menu 2 <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>'
                 ],
             ]
         );

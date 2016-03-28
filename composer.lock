@@ -1624,7 +1624,7 @@
                 "shasum": ""
             },
             "require": {
-                "bower-asset/fontawesome": "4.5.0",
+                "bower-asset/fontawesome": "4.3.*",
                 "php": ">=5.4.0",
                 "yiisoft/yii2": "2.0.*"
             },
