@@ -14,18 +14,18 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="box box-solid box-default">
 
-        <div class="box-header with-border">
-            <i class="fa fa-tags"></i><h1 class="box-title" ><?= Html::encode($this->title) ?></h1>
+        <div class="box-header">
+            <i class="fa fa-tags"></i><h1 class="box-title"><?= Html::encode($this->title) ?></h1>
+            <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
         </div>
 
         <div class="box-body">
 
-            <div class="box-tools" style="float: right;">
-                 <?= Html::a(Yii::t('app', 'Create Categoria'), ['create'], ['class' => 'btn btn-success']) ?>
+            <div style="float: right">
+                <?= Html::a(Yii::t('app', 'Nueva Categoria'), ['create'], ['class' => 'btn btn-success']) ?>
             </div>
 
             <br/><br/>
-            <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
             <?= GridView::widget([
                 'dataProvider' => $dataProvider,
@@ -36,6 +36,21 @@ $this->params['breadcrumbs'][] = $this->title;
                     'id',
                     'nombre',
                     'descripcion',
+
+                    /*array(
+                        'format' => 'image',
+                        'value'=>function($data) { return $data->imageurl; },
+                    ),*/
+
+                    [
+                        'attribute' => 'Imagen',
+                        'format' => 'html',
+                        'value' => function ($data) {
+                            return Html::img(Yii::getAlias('@web') . '/uploads/categorias/'. $data['imagen'],
+                                ['width' => '36px', 'margin' => '2px']);
+                        },
+                    ],
+
                     'ultima_mod',
 
                     ['class' => 'yii\grid\ActionColumn'],
@@ -43,5 +58,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ]); ?>
 
         </div>
+
     </div>
+
 </div>

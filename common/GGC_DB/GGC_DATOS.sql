@@ -1,0 +1,41 @@
+/* Datos iniciales de GGC */
+
+/* Categorias */
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Alquiler", "alquiler.png", "Alquiler de la Casa", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Alimentos", "alimentos.png", "Alimentos", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Antel / ADSL", "antelAdsl.png", "ANTEL / ADSL: Banda Ancha", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Antel / Mobil", "antelMobil.png", "ANTEL / MOBIL: Telefonia Mobil", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Banco", "banco.png", "Banco y afines", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Bar", "bar.png", "Bar", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Bebidas", "bebidas.png", "Bebidas Varias", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Cine / Teatro", "cine.png", "Cine / Teatro", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Calzado", "calzado.png", "Calzado", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Cosmética", "cosmetica.png", "Cosmética", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Cultivo", "cultivo.png", "Cultivo de Marihuana, y alguna otra cosita", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Cerrajero", "cerrajero.png", "Cerrajero", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Deporte", "deportes.png", "Deporte", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Diario", "diario.png", "La Diaria", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Diversión", "diversion.png", "Diversión", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Delivery", "delivery.png", "Delivery", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Dentista", "dentista.png", "Dentista", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Electrodomésticos", "electrodomesticos.png", "Electrodomésticos", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Electronica", "electronica.png", "Electronica y cosas de Nerd", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Feria", "feria.png", "Feria", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Ferretería", "ferreteria.png", "Ferretería", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Facultad / UdelaR", "facultad.png", "Facultad, Universidad de la Republica", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Gas", "garrafas.png", "Gas, garrafas", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Hospital", "hospital.png", "Hospital", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Mascotas", "mascotas.png", "Mascotas", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Medicamentos", "medicamentos.png", "Medicamentos", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Libros", "libros.png", "Libros", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("OSE", "ose.png", "OSE: Gastos de Agua", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Peluquería", "peluqueria.png", "Peluquería", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Productos de limpieza", "limpieza.png", "Productos de Limpieza", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Regalos", "regalos.png", "Regalos", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Reparaciones", "reparaciones.png", "Reparaciones del hogar, bici, etc.", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Restaurantes", "restaurantes.png", "Restaurantes", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Ropa", "ropa.png", "Ropa", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("STM", "stm.png", "STM: Sistema de transporte metropolitano", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Taxi", "taxi.png", "Taxi, Uber y afines", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("UTE", "ute.png", "UTE: Gastos de Electricidad", "2016-07-17 01:13:13");
+INSERT INTO categorias (nombre, imagen, descripcion, ultima_mod) VALUES ("Vacaciones", "vacaciones.png", "Vacaciones", "2016-07-17 01:13:13");

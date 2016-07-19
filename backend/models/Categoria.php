@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $id
  * @property string $nombre
+ * @property string $imagen
  * @property string $descripcion
  * @property string $ultima_mod
  *
@@ -30,9 +31,9 @@ class Categoria extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nombre'], 'required'],
+            [['nombre', 'imagen'], 'required'],
             [['ultima_mod'], 'safe'],
-            [['nombre'], 'string', 'max' => 40],
+            [['nombre', 'imagen'], 'string', 'max' => 100],
             [['descripcion'], 'string', 'max' => 200]
         ];
     }
@@ -45,6 +46,7 @@ class Categoria extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'nombre' => Yii::t('app', 'Nombre'),
+            'imagen' => Yii::t('app', 'Imagen'),
             'descripcion' => Yii::t('app', 'Descripcion'),
             'ultima_mod' => Yii::t('app', 'Ultima Mod'),
         ];

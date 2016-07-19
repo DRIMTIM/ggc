@@ -1,4 +1,5 @@
-DROP TABLE IF EXISTS grupos_personas, tareas, gastos, ingresos, notificaciones, personas, grupos, agendas, cajas, pagos, categorias;
+DROP TABLE IF EXISTS grupos_personas, tareas, gastos, ingresos, notificaciones, personas, grupos, agendas, cajas, pagos, tipo_gastos,
+    categorias;
 
 CREATE TABLE
 cajas(
@@ -7,7 +8,7 @@ cajas(
     monto_disponible decimal(10,2),
     monto_inicial decimal NOT NULL,
     fecha_cierre TIMESTAMP,
-    observacion VARCHAR(200),
+    observacion VARCHAR(300),
     ultima_mod TIMESTAMP NOT NULL,
     PRIMARY KEY (id)
 
@@ -23,10 +24,20 @@ agendas(
 );
 
 CREATE TABLE
+tipo_gastos(
+
+    id int NOT NULL AUTO_INCREMENT,
+    nombre varchar(80) NOT NULL,
+    PRIMARY KEY (id)
+
+);
+
+CREATE TABLE
 categorias(
 
     id bigint NOT NULL AUTO_INCREMENT,
-    nombre varchar(40) NOT NULL,
+    nombre varchar(100) NOT NULL,
+    imagen varchar(100) NOT NULL,
     descripcion varchar(200),
     ultima_mod TIMESTAMP NOT NULL,
     PRIMARY KEY (id)
@@ -124,16 +135,17 @@ gastos(
     id_categoria bigint NOT NULL,
     id_grupo bigint,
     id_persona bigint NOT NULL,
-    id_pago bigint NOT NULL,
+    id_pago bigint,
+    id_tipo int NOT NULL,
   	concepto varchar(100) NOT NULL,
   	valor decimal(10,2),
   	evidencia varchar(100),
-  	observacion varchar(300) NOT NULL,
-    esFijo TINYINT(1) NOT NULL,
+  	observacion varchar(500) NOT NULL,
   	ultima_mod TIMESTAMP NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY(id_categoria) REFERENCES categorias(id) ON DELETE CASCADE,
     FOREIGN KEY(id_persona) REFERENCES personas(id) ON DELETE CASCADE,
+    FOREIGN KEY(id_tipo) REFERENCES tipo_gastos(id) ON DELETE CASCADE,
     FOREIGN KEY(id_pago) REFERENCES pagos(id) ON DELETE CASCADE
 
 );

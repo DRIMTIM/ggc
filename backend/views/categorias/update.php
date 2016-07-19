@@ -5,19 +5,24 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Categoria */
 
-$this->title = Yii::t('app', 'Update {modelClass}: ', [
+$this->title = Yii::t('app', 'Editar {modelClass}: ', [
     'modelClass' => 'Categoria',
-]) . ' ' . $model->id;
+]) . ' ' . $model->nombre;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Categorias'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = Yii::t('app', 'Update');
+$this->params['breadcrumbs'][] = ['label' => $model->nombre, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = Yii::t('app', 'Editar');
 ?>
 <div class="categoria-update">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <div class="box box-solid box-default">
+        <div class="box-header">
+            <h1 class="box-title"><?= Html::encode($this->title) ?></h1>
+        </div>
 
-    <?= $this->render('_form', [
-        'model' => $model,
-    ]) ?>
-
+        <div class="box-body">
+            <?= $this->render('_form', [
+                'model' => $model,
+            ]) ?>
+        </div>
+    </div>
 </div>

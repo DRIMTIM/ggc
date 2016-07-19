@@ -19,7 +19,7 @@ class BuscarCategorias extends Categoria
     {
         return [
             [['id'], 'integer'],
-            [['nombre', 'descripcion', 'ultima_mod'], 'safe'],
+            [['nombre', 'imagen', 'descripcion', 'ultima_mod'], 'safe'],
         ];
     }
 
@@ -61,6 +61,7 @@ class BuscarCategorias extends Categoria
         ]);
 
         $query->andFilterWhere(['like', 'nombre', $this->nombre])
+            ->andFilterWhere(['like', 'imagen', $this->imagen])
             ->andFilterWhere(['like', 'descripcion', $this->descripcion]);
 
         return $dataProvider;

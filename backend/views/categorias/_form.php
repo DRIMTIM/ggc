@@ -14,12 +14,14 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'nombre')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'imagen')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'descripcion')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'ultima_mod')->textInput() ?>
+    <!--<?= $form->field($model, 'ultima_mod')->textInput() ?>-->
 
-    <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+    <div class="form-group" style="float: right">
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Crear Categoria') : Yii::t('app', 'Edtar Categoria'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
